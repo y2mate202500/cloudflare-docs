@@ -1,157 +1,55 @@
----
-pcx_content_type: configuration
-title: WebSockets
-head: []
-description: Communicate in real time with your Cloudflare Workers.
+**y2mate.now – The Ultimate YouTube Video Downloader in 2025**
 
----
+In today's fast-paced digital world, having quick access to your favorite online videos is more essential than ever. Whether you're saving educational content, music videos, or tutorials for offline viewing, a reliable <a href="https://y2mate.now">Youtube video downloader</a> makes life easier. That’s where y2mate.now comes in—a fast, free, and easy-to-use solution that’s become a favorite among users worldwide.
 
-## Background
+**What is y2mate.now?**
 
-WebSockets allow you to communicate in real time with your Cloudflare Workers serverless functions. For a complete example, refer to [Using the WebSockets API](/workers/examples/websockets/).
+y2mate.now is a powerful online tool designed to help users download YouTube videos quickly and efficiently. Without needing to install any software, users can simply copy and paste the video link into the platform and start downloading in seconds. It supports various video resolutions and even allows audio-only downloads for those who just want the music or dialogue.
 
-:::note
+**Why Use a YouTube Video Downloader Like y2mate.now?**
 
+Here are some key reasons why y2mate.now stands out among other YouTube video downloader tools:
 
-If your application needs to coordinate among multiple WebSocket connections, such as a chat room or game match, you will need clients to send messages to a single-point-of-coordination. Durable Objects provide a single-point-of-coordination for Cloudflare Workers, and are often used in parallel with WebSockets to persist state over multiple clients and connections. In this case, refer to [Durable Objects](/durable-objects/) to get started, and prefer using the Durable Objects' extended [WebSockets API](/durable-objects/best-practices/websockets/).
+**1. No Installation Required**
 
+You don’t need to clutter your device with third-party apps. Everything happens right in your browser.
 
-:::
+**2. Multiple Format Options**
 
-## Constructor
+y2mate.now supports downloading in MP4, MP3, and other common formats. Whether you're downloading for video playback or audio use, the platform delivers.
 
-```js
-// { 0: <WebSocket>, 1: <WebSocket> }
-let websocketPair = new WebSocketPair();
-```
+**3. Fast and Reliable**
 
-The WebSocketPair returned from this constructor is an Object, with two WebSockets at keys `0` and `1`.
+Downloads on y2mate.now are quick, with minimal buffering or delay. It's optimized for performance—even on slower internet connections.
 
-These WebSockets are commonly referred to as `client` and `server`. The below example combines `Object.values` and ES6 destructuring to retrieve the WebSockets as `client` and `server`:
+**4. Free to Use**
 
-```js
-let [client, server] = Object.values(new WebSocketPair());
-```
+There’s no cost to use y2mate.now. Unlike some other tools, there are no hidden fees or limits on how many videos you can download.
 
-## Methods
+**5. Mobile-Friendly**
 
-### accept
+Whether you're on your phone or desktop, y2mate.now works seamlessly across all devices. It's fully responsive, so you can use it on the go.
 
+**How to Use y2mate.now – A Quick Guide**
 
+**1.** Go to YouTube and find the video you want to download.
 
-* <code>accept()</code>
+**2.** Copy the video URL from the browser address bar.
 
-  * Accepts the WebSocket connection and begins terminating requests for the WebSocket on Cloudflare's global network. This effectively enables the Workers runtime to begin responding to and handling WebSocket requests.
+**3.** Visit y2mate.now in your browser.
 
+**4.** Paste the URL into the search box and hit enter.
 
+**5.** Choose your format and resolution, then click download.
 
-### addEventListener
+That’s it—your video will start downloading instantly.
 
+**Is It Safe?**
 
+y2mate.now does not require user accounts or personal information, making it a safer alternative to many other online tools. However, as with any online service, it's important to have updated antivirus protection and avoid clicking on suspicious ads.
 
-* <code>addEventListener(eventWebSocketEvent, callbackFunctionFunction)</code>
+**Final Thoughts**
 
-  * Add callback functions to be executed when an event has occurred on the WebSocket.
+If you're looking for a dependable YouTube video downloader, y2mate.now is a solid choice. With its user-friendly interface, fast download speeds, and variety of supported formats, it's no wonder why so many users turn to this tool for their video needs.
 
-
-
-#### Parameters
-
-
-
-* `event` WebSocketEvent
-
-  * The WebSocket event (refer to [Events](/workers/runtime-apis/websockets/#events)) to listen to.
-
-* <code>callbackFunction(messageMessage)</code> Function
-
-  * A function to be called when the WebSocket responds to a specific event.
-
-
-
-### close
-
-
-
-* <code>close(codenumber, reasonstring)</code>
-
-  * Close the WebSocket connection.
-
-
-
-#### Parameters
-
-
-
-* <code>codeinteger</code> optional
-
-  * An integer indicating the close code sent by the server. This should match an option from the [list of status codes](https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent#status_codes) provided by the WebSocket spec.
-
-* <code>reasonstring</code> optional
-
-  * A human-readable string indicating why the WebSocket connection was closed.
-
-
-
-### send
-
-
-
-* <code>send(messagestring | ArrayBuffer | ArrayBufferView)</code>
-
-  * Send a message to the other WebSocket in this WebSocket pair.
-
-
-
-#### Parameters
-
-
-
-* <code>messagestring</code>
-
-  * The message to send down the WebSocket connection to the corresponding client. This should be a string or something coercible into a string; for example, strings and numbers will be simply cast into strings, but objects and arrays should be cast to JSON strings using <code>JSON.stringify</code>, and parsed in the client.
-
-
-
-***
-
-## Events
-
-
-
-* <code>close</code>
-  * An event indicating the WebSocket has closed.
-
-* <code>error</code>
-  * An event indicating there was an error with the WebSocket.
-
-* <code>message</code>
-  * An event indicating a new message received from the client, including the data passed by the client.
-
-
-
-:::note
-
-
-WebSocket messages received by a Worker have a size limit of 1 MiB (1048576).  If a larger message is sent, the WebSocket will be automatically closed with a `1009` "Message is too large" response.
-
-
-:::
-
-## Types
-
-### Message
-
-
-
-* `data` any - The data passed back from the other WebSocket in your pair.
-* `type` string - Defaults to `message`.
-
-
-
-***
-
-## Related resources
-
-* [Mozilla Developer Network's (MDN) documentation on the WebSocket class](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
-* [Our WebSocket template for building applications on Workers using WebSockets](https://github.com/cloudflare/websocket-template)
+Start downloading your favorite videos today with y2mate.now—the go-to YouTube video downloader for 2025.
